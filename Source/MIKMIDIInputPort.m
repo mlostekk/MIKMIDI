@@ -176,6 +176,7 @@
 			tokenPairs = [NSMutableArray array];
 			[self.handlerTokenPairsByEndpoint setObject:tokenPairs forKey:source];
 		}
+		[tokenPairs removeAllObjects];
 		[tokenPairs addObject:tokenHandlerPair];
 	});
 }
