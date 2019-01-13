@@ -103,7 +103,7 @@ static NSMutableSet *registeredMIKMIDICommandSubclasses;
 	self = [super init];
 	if (self) {
 		if (packet != NULL) {
-			self.midiTimestamp = packet->timeStamp;
+			self.midiTimestamp = MIKMIDIGetCurrentTimeStamp();
 			self.internalData = [NSMutableData dataWithBytes:packet->data length:packet->length];
 		} else {
 			self.midiTimestamp = MIKMIDIGetCurrentTimeStamp();
